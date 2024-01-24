@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Comic Neue", cursive;
+  background: radial-gradient(circle, rgb(43, 44, 46) 13%, rgb(25, 25, 25) 65%);
+}
+
+.cards {
+  display: flex;
+  height: 700px;
+  width: 1000px;
+}
+.cards .one {
+  background-image: url("../img/portrait-657116_640.jpg");
+}
+.cards .two {
+  background-image: url("../img/man-1690965_640.jpg");
+}
+
+.card {
+  position: relative;
+  width: 50%;
+  margin: 0 10px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  color: white;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.card button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 36px;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  cursor: crosshair;
+  z-index: 10;
+}
+.card button:hover ~ .text {
+  clip-path: circle(120% at 50% 90%);
+}
+.card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 50px 30px;
+  background-color: rgba(0, 0, 0, 0.84);
+  clip-path: circle(0 at 50% 90%);
+  transition: clip-path 0.8s;
+}
+.card .text h1 {
+  color: rgb(140, 113, 47);
+}
+.card .text h2 {
+  margin-bottom: 30px;
+  color: gray;
+}/*# sourceMappingURL=style.css.map */
